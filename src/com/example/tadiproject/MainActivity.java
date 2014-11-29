@@ -16,6 +16,7 @@ import android.view.MenuItem;
 
 import com.tadi.fragment.DonateListFragment;
 import com.tadi.fragment.FirstLoginFragment;
+import com.tadi.fragment.ProfileFragment;
 
 public class MainActivity extends ActionBarActivity implements
 		NavigationDrawerFragment.NavigationDrawerCallbacks, TabListener {
@@ -54,9 +55,22 @@ public class MainActivity extends ActionBarActivity implements
 	public void onNavigationDrawerItemSelected(int position) {
 		// update the main content by replacing fragments
 		FragmentManager fragmentManager = getSupportFragmentManager();
-		if(position == 0)
+		if(position == 0 && !loggedIn)
 			fragmentManager.beginTransaction()
 					.replace(R.id.container, new FirstLoginFragment()).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
+		else if(position == 0 && loggedIn)
+			fragmentManager.beginTransaction()
+					.replace(R.id.container, new ProfileFragment()).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
+		else if(position == 1)
+			fragmentManager.beginTransaction()
+				.replace(R.id.container, new DonateListFragment(true)).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
+		else if(position == 3){
+			loggedIn = false;
+			fragmentManager.beginTransaction()
+				.replace(R.id.container, new DonateListFragment(true)).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
+			mNavigationDrawerFragment.getAdapter().notifyDataSetChanged();
+		}
+		
 	}
 
 	public void restoreActionBar() {

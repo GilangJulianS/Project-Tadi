@@ -1,12 +1,14 @@
 package com.example.tadiproject;
 
 import com.tadi.adapter.DrawerItemAdapter;
+import com.tadi.fragment.ProfileFragment;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.content.SharedPreferences;
@@ -87,6 +89,7 @@ public class NavigationDrawerFragment extends Fragment {
 				});
 		adapter = new DrawerItemAdapter(getActivity());
 		adapter.addItem("Login");
+		adapter.addItem("Sharity");
 		adapter.addItem("History");
 		adapter.addItem("Logout");
 		mDrawerListView.setAdapter(adapter);

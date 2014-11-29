@@ -4,24 +4,26 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="bottom|right"
-    android:background="@drawable/test_asset" >
+    android:background="@drawable/background_image">
 
-    <ImageView
-        android:id="@+id/finishButton"
-        android:layout_width="108dp"
-        android:layout_height="50dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:clickable="true"
-        android:src="@drawable/buttonselected" />
-
-    <ImageView
+    <Button
         android:id="@+id/shareButton"
-        android:layout_width="108dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="25dp"
-        android:layout_marginRight="20dp"
-        android:clickable="true"
-        android:src="@drawable/buttonselected" />
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="15dp"
+        android:background="#fbb80f"
+        android:text="Share"
+        android:textColor="#ffffff" />
+    
+    <Button
+        android:id="@+id/finishButton"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:background="#dd3a33"
+        android:text="Finish"
+        android:textColor="#ffffff" />
 
 </LinearLayout>

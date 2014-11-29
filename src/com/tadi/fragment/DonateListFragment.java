@@ -57,6 +57,7 @@ public class DonateListFragment extends Fragment {
 		super.onAttach(activity);
 		main = (MainActivity) activity;
 		main.changeMode(true);
+		main.getSupportActionBar().show();
 	}
 	
 	@Override

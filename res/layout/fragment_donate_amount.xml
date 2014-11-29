@@ -4,112 +4,153 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ImageView
-        android:id="@+id/donate500"
-        android:layout_width="70dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="35dp"
-        android:layout_gravity="center_horizontal"
-        android:clickable="true"
-        android:src="@drawable/test_asset" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp" >
-
-        <ImageView
-            android:id="@+id/donate1k"
-            android:layout_width="0dp"
-            android:layout_height="47dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:src="@drawable/test_asset" />
-
-        <ImageView
-            android:id="@+id/donate5k"
-            android:layout_width="0dp"
-            android:layout_height="47dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            android:src="@drawable/test_asset" />
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OR"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="35dp"
-        android:layout_marginBottom="35dp" />
-
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.26"
-            android:gravity="right"
-            android:text="IDR" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/activity_vertical_margin"
+		    android:paddingBottom="@dimen/activity_vertical_margin"
+		    android:paddingLeft="@dimen/activity_horizontal_margin"
+		    android:paddingRight="@dimen/activity_horizontal_margin"
+		    android:gravity="center_horizontal"
+            android:orientation="vertical" >
 
-        <EditText
-            android:id="@+id/countPayment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="20dp"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:layout_weight="1"
-            android:ems="10"
-            android:inputType="number"
-            android:editable="true"
-            android:hint="jumlah lain" >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp" >
 
-            <requestFocus />
-        </EditText>
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:checkedButton="@+id/first"
+                    android:orientation="horizontal" >
 
-    </LinearLayout>
+                    <RadioButton
+                        android:id="@+id/tmoneyButton"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:height="50dp"
+                        android:text="Phone&apos;s Credit"
+                        android:width="0dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="2dp" >
+                    <RadioButton
+                        android:id="@+id/pulsaButton"
+                        android:layout_weight="1"
+                        android:height="50dp"
+                        android:text="T-Money"
+                        android:width="0dp" />
+                </RadioGroup>
+            </LinearLayout>
+            
+                <TextView
+			        android:id="@+id/textView3"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="15dp"
+			        android:layout_gravity="center_horizontal"
+			        android:text="How big you&apos;ll make a change" />
+			
+			    <ImageView
+			        android:id="@+id/donate500"
+			        android:layout_width="wrap_content"
+			        android:layout_height="60dp"
+			        android:adjustViewBounds="true"
+			        android:layout_marginTop="30dp"
+			        android:clickable="true"
+			        android:src="@drawable/b500x" />
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="20dp"
+			        android:gravity="center_horizontal" >
+			
+			        <ImageView
+			            android:id="@+id/donate1k"
+			            android:layout_width="wrap_content"
+			            android:layout_height="60dp"
+			            android:layout_marginRight="10dp"
+			            android:adjustViewBounds="true"
+			            android:clickable="true"
+			            
+			            android:src="@drawable/b1000x" />
+			
+			        <ImageView
+			            android:id="@+id/donate5k"
+			            android:layout_width="wrap_content"
+			            android:layout_height="60dp"
+			            android:adjustViewBounds="true"
+			            android:layout_marginLeft="10dp"
+			            android:clickable="true"
+			            android:src="@drawable/b5000x" />
+			
+			    </LinearLayout>
+			
+			    <TextView
+			        android:id="@+id/textView1"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="OR"
+			        android:layout_gravity="center_horizontal"
+			        android:layout_marginTop="20dp"
+			        android:layout_marginBottom="10dp" />
+			
+			    <TextView
+			        android:id="@+id/textView4"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Input another amount"
+			        android:layout_marginBottom="20dp" />
+			
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content" >
+			
+			        <TextView
+			            android:id="@+id/textView2"
+			            android:layout_width="0dp"
+			            android:layout_height="46dp"
+			            android:gravity="center_horizontal|center_vertical"
+			            android:layout_weight="1"
+			            android:text="IDR"
+			            android:background="#dddddd" />
+			
+			        <EditText
+			            android:id="@+id/countPayment"
+			            android:layout_width="0dp"
+			            android:layout_height="46dp"
+			            android:layout_weight="5"
+			            android:paddingLeft="15dp"
+			            android:paddingTop="5dp"
+			            android:paddingBottom="5dp"
+			            android:background="@drawable/login_email_text"
+			            android:editable="true"
+			            android:ems="10"
+			            android:focusable="true"
+			            android:focusableInTouchMode="true"
+			            android:hint="jumlah lain"
+			            android:inputType="number" >
+			
+			            <requestFocus />
+			        </EditText>
+			
+			    </LinearLayout>
 
-        <RadioGroup android:layout_width="fill_parent"               
-            android:layout_height="50dp"           
-            android:orientation="horizontal"         
-            android:checkedButton="@+id/first">  
-
-		<RadioButton android:id="@+id/tmoneyButton"        
-		    android:width="0dp"        
-		  	android:height="50dp"
-		  	android:layout_weight="1"
-		  	android:text="T-Money"
-		  	android:layout_marginLeft="20dp"/> 
-		
-	   	<RadioButton android:id="@+id/pulsaButton"        
-    		android:width="0dp"     
-      		android:height="50dp"
-      		android:layout_weight="1"
-      		android:text="Pulsa"/>
-		         
-		</RadioGroup>
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/finalDonateButton"
-        android:layout_width="98dp"
-        android:layout_height="45dp"
-        android:src="@drawable/buttonselected"
-        android:layout_marginTop="25dp"
-        android:clickable="true"
-        android:layout_gravity="center_horizontal" />
+			    <Button
+			        android:id="@+id/finalDonateButton"
+			        android:layout_width="340dp"
+			        android:layout_height="wrap_content"
+			        android:background="#dd3a33"
+			        android:text="Give"
+			        android:layout_marginTop="20dp"
+			        android:textColor="#ffffff" />
+            
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

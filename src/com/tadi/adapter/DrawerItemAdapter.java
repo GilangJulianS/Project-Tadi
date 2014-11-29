@@ -58,7 +58,6 @@ public class DrawerItemAdapter extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		ViewHolder holder = null;
 		int type = getItemViewType(position);
-		System.out.println(type);
 		if(convertView == null || position == 0){
 			holder = new ViewHolder();
 			switch(type){

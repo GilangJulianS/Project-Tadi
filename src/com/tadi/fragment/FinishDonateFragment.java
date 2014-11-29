@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.tadiproject.R;
@@ -19,8 +20,8 @@ public class FinishDonateFragment extends Fragment {
 		super.onCreateView(inflater, container, savedInstanceState);
 		View rootView = inflater.inflate(R.layout.fragment_donate_ending, container, false);
 		
-		ImageView finishButton = (ImageView)rootView.findViewById(R.id.finishButton);
-		ImageView shareButton = (ImageView)rootView.findViewById(R.id.shareButton);
+		Button finishButton = (Button)rootView.findViewById(R.id.finishButton);
+		Button shareButton = (Button)rootView.findViewById(R.id.shareButton);
 		
 		finishButton.setOnClickListener(new View.OnClickListener() {
 			@Override

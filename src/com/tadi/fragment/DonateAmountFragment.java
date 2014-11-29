@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.EditText;
@@ -31,7 +32,7 @@ public class DonateAmountFragment extends Fragment {
 		ImageView button500 = (ImageView)rootView.findViewById(R.id.donate500);
 		ImageView button1k = (ImageView)rootView.findViewById(R.id.donate1k);
 		ImageView button5k = (ImageView)rootView.findViewById(R.id.donate5k);
-		ImageView finalButtonDonate = (ImageView)rootView.findViewById(R.id.finalDonateButton);
+		Button finalButtonDonate = (Button)rootView.findViewById(R.id.finalDonateButton);
 		RadioButton tmoneyButton = (RadioButton)rootView.findViewById(R.id.tmoneyButton);
 		RadioButton pulsaButton = (RadioButton)rootView.findViewById(R.id.pulsaButton);
 		countPayment = (EditText)rootView.findViewById(R.id.countPayment);
