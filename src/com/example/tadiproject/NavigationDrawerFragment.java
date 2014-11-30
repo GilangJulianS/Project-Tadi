@@ -91,7 +91,7 @@ public class NavigationDrawerFragment extends Fragment {
 		adapter.addItem("Login");
 		adapter.addItem("Sharity");
 		adapter.addItem("History");
-		adapter.addItem("Logout");
+		adapter.addItem("Tell Us");
 		mDrawerListView.setAdapter(adapter);
 		selectItem(-1);
 		return mDrawerListView;

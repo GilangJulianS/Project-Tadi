@@ -34,7 +34,11 @@ public class DonateListFragment extends Fragment {
 		ListView donateList = (ListView)rootView.findViewById(R.id.listDonate);
 		
 		
-		DonateListItemAdapter adapter = new DonateListItemAdapter(getActivity(), MainActivity.donateItems);
+		DonateListItemAdapter adapter;
+		if(organization)
+			adapter = new DonateListItemAdapter(getActivity(), MainActivity.organizationItems);
+		else
+			adapter = new DonateListItemAdapter(getActivity(), MainActivity.personalItems);
 		
 		donateList.setAdapter(adapter);
 		

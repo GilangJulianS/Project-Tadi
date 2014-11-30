@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -41,6 +42,7 @@ public class FirstLoginFragment extends Fragment {
 			public void onClick(View v) {
 				if(tEmail.getText().toString().equals("dummy") && tPassword.getText().toString().equals("dummy"))
 					login();
+				getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 			}
 		});
 		bFacebook = (ImageView) view.findViewById(R.id.imageView3);
@@ -51,8 +53,10 @@ public class FirstLoginFragment extends Fragment {
 			public void onClick(View v) {
 				((ActionBarActivity)getActivity()).getSupportFragmentManager().beginTransaction()
 					.replace(R.id.container, new OpeningFragment()).commit();
+				getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 			}
 		});
+		getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 		return view;
 	}
 	
@@ -60,6 +64,9 @@ public class FirstLoginFragment extends Fragment {
 		MainActivity.loggedIn = true;
 		((MainActivity)getActivity()).getSupportFragmentManager().beginTransaction()
 				.replace(R.id.container, new DonateListFragment(true)).setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE).commit();
+		((MainActivity)getActivity()).getDrawer().getAdapter().addItem("Tell Us");
+		((MainActivity)getActivity()).getDrawer().getAdapter().addItem("Logout");
+		((MainActivity)getActivity()).getDrawer().getAdapter().notifyDataSetChanged();
 	}
 	
 	@Override

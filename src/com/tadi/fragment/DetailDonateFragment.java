@@ -17,7 +17,12 @@ import com.example.tadiproject.R;
 public class DetailDonateFragment extends Fragment {
 	
 	public static int position;
-
+	ImageView donateLogo;
+	TextView donateTitle;
+	TextView donateDescription;
+	Button subscribeButton;
+	Button donateButton;
+	
 	public DetailDonateFragment() {
 	}
 	
@@ -25,15 +30,15 @@ public class DetailDonateFragment extends Fragment {
 		super.onCreateView(inflater, container, savedInstanceState);
 		View rootView = inflater.inflate(R.layout.fragment_detail_donate, container, false);
 		
-		ImageView donateLogo = (ImageView)rootView.findViewById(R.id.detailDonateLogo);
-		TextView donateTitle = (TextView)rootView.findViewById(R.id.detailDonateTitle);
-		TextView donateDescription = (TextView)rootView.findViewById(R.id.detailDonateDescription);
+		donateLogo = (ImageView)rootView.findViewById(R.id.detailDonateLogo);
+		donateTitle = (TextView)rootView.findViewById(R.id.detailDonateTitle);
+		donateDescription = (TextView)rootView.findViewById(R.id.detailDonateDescription);
 		
-		donateLogo.setImageResource(MainActivity.donateItems.get(position).getDonateImage());
-		donateTitle.setText(MainActivity.donateItems.get(position).getTitle());
-		donateDescription.setText(MainActivity.donateItems.get(position).getDescription());
+		donateLogo.setImageResource(MainActivity.organizationItems.get(position).getDonateImage());
+		donateTitle.setText(MainActivity.organizationItems.get(position).getTitle());
+		donateDescription.setText(MainActivity.organizationItems.get(position).getDescription());
 		
-		ImageView subscribeButton = (ImageView)rootView.findViewById(R.id.subscribeButton);
+		subscribeButton = (Button)rootView.findViewById(R.id.subscribeButton);
 		subscribeButton.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -41,7 +46,7 @@ public class DetailDonateFragment extends Fragment {
 			}
 		});
 		
-		ImageView donateButton = (ImageView)rootView.findViewById(R.id.donateButton);
+		donateButton = (Button)rootView.findViewById(R.id.donateButton);
 		donateButton.setOnClickListener(new View.OnClickListener() {
 			
 			@Override

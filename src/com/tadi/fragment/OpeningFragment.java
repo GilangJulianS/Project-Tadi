@@ -23,7 +23,7 @@ public class OpeningFragment extends Fragment {
 	private ViewPager pager;
 	private Button bNext;
 	private PagerAdapter adapter;
-	private static final int NUM_PAGES = 4;
+	private static final int NUM_PAGES = 3;
 	private CirclePageIndicator titleIndicator;
 	private ActionBarDrawerToggle toggle;
 	private MainActivity main;
@@ -76,13 +76,11 @@ public class OpeningFragment extends Fragment {
         public Fragment getItem(int position) {
         	SlideImageFragment fragment = new SlideImageFragment();
             switch(position){
-            case 0: fragment.setImage(R.drawable.lapangan1);
+            case 0: fragment.setImage(R.drawable.picture_2);
             		break;
-            case 1: fragment.setImage(R.drawable.lapangan2);
+            case 1: fragment.setImage(R.drawable.picture_1);
     				break;
-            case 2: fragment.setImage(R.drawable.lapangan3);
-					break;
-            case 3: fragment.setImage(R.drawable.lapangan4);
+            case 2: fragment.setImage(R.drawable.picture_3);
 					break;
             }
             return fragment;
